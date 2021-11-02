@@ -1,0 +1,7 @@
+table, th, td{
+    border: 1px solid black;
+}
+.order-table{
+    margin-left: 500px;
+    
+}

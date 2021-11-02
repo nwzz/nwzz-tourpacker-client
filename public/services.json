@@ -1,0 +1,78 @@
+
+[
+    {
+        "id": 1,
+        "name": "Paris, France",
+        "price": "300",
+        "description": "All types of Diagnostics and Medical test and Report provide by our Experienced Doctors and Assistants  .",
+        "img": "https://i.ibb.co/dQG9MWJ/pic-1.jpg",
+        "duration": "3 days 4 nights"
+        
+    },
+    {
+        "id": 2,
+        "name": "BLOOD CANCER",
+        "price": "100",
+        "description": "We Have a Complete Treatment and Diagnostics for Blood Cancer Chemo Therapy and Medicinal treatments are available at our center.",
+        "img": "https://i.ibb.co/wNJ6VNm/pic-2.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 3,
+        "name": " NEUROLOGY SURGERY",
+        "price": "150",
+        "description": "We Have number of experienced Neuro Surgoen and Specialist of Neurology working for years.",
+        "img": "https://i.ibb.co/GQrTwzV/pic-3.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 4,
+        "name": "ALLERGIC ISSUE",
+        "price": "180",
+        "description": "World Class Allergic Treatment are Available here not matter from when You are suffering for.",
+        "img": "https://i.ibb.co/QffLGg7/pic-4.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 5,
+        "name": "DENTAL CARE",
+        "price": "100",
+        "description": "World Class Dentist are also Available at our place all kinds of dental equipments and treatments are highly available and reasonable for patients .",
+        "img": "https://i.ibb.co/T2MYPbJ/pic-5.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 6,
+        "name": "BODY SURGERY",
+        "price": "300",
+        "description": "We Have a Complete Treatment and Diagnostics for Blood Cancer Chemo Therapy and Medicinal treatments are available at our center.",
+        "img": "https://i.ibb.co/4K7sjKx/pic-6.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 7,
+        "name": "BLOOD CANCER",
+        "price": "100",
+        "description": "We Have a Complete Treatment and Diagnostics for Blood Cancer Chemo Therapy and Medicinal treatments are available at our center.",
+        "img": "https://i.ibb.co/0Yr3WHF/pic-7.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 8,
+        "name": " NEUROLOGY SURGERY",
+        "price": "150",
+        "description": "We Have number of experienced Neuro Surgoen and Specialist of Neurology working for years.",
+        "img": "https://i.ibb.co/wp26pj9/pic-8.jpg",
+        "duration": "3 days 4 nights"
+    },
+    {
+        "id": 9,
+        "name": "ALLERGIC ISSUE",
+        "price": "180",
+        "description": "World Class Allergic Treatment are Available here not matter from when You are suffering for.",
+        "img": "https://i.ibb.co/JFKY4Gw/pic-9.jpg",
+        "duration": "3 days 4 nights"
+    }
+
+    
+]
