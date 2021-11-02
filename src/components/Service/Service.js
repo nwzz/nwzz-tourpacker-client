@@ -12,7 +12,7 @@ const Service = ({ service }) => {
             <h6>Package: <span style={{color:'tomato'}}>{duration}</span></h6>
             <p className="px-3">{description}</p>
             <Link to={`/booking/${_id}`}>
-                <button style={{backgroundColor:'cadetblue', color:'white'}} className="btn ">Book Now </button>
+                <button style={{backgroundColor:'tomato', color:'white'}} className="btn ">Book Now </button>
             </Link>
         </div>
     );

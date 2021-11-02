@@ -26,23 +26,25 @@ const Footer = () => {
                     
                 </div>
                 <div className="col-md-3 d-grid">
-                    <h4>Popular Department</h4>
-                    <p>Gyconology</p>
-                    <p>Neurology</p>
-                    <p>Dermatology</p>
-                    <p>Medicine</p>
+                    <h4>Popular Trips</h4>
+                    <p>Who we are</p>
+                    <p>Career</p>
+                    <p>Company History</p>
+                    <p>Legal</p>
                 </div>
                 <div className="col-md-3 d-grid">
                     <h4>Organization</h4>
+                    <p>Travel Advisors</p>
                     <p>Privacy Policy</p>
                     <p>Refund Policy</p>
                     <p>Terms and Conditions</p>
                 </div>
                 <div className="col-md-3 d-grid">
                     <h4>Others</h4>
-                    <p>Doctors</p>
-                    <p>Surgeon</p>
-                    <p>Physician</p>
+                    <p>Destination</p>
+                    <p>Blog</p>
+                    <p>Visa</p>
+                    <p>Insurance</p>
                 </div>
             </div><br /><br />s
             

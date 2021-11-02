@@ -5,6 +5,7 @@ import caro1 from '../../images/travel-img/caro2.jpg';
 import caro2 from '../../images/travel-img/caro5.jpg';
 import caro3 from '../../images/travel-img/seabeach.jpg';
 import DashBoard from '../DashBoard/DashBoard';
+import ShowOff from '../ShowOff/ShowOff';
 
 const Home = () => {
     return (
@@ -48,6 +49,7 @@ const Home = () => {
             </div>
             
             <Services></Services>
+            <ShowOff></ShowOff>
         </div>
     );
 };

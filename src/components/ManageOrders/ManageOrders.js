@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import DashBoard from '../DashBoard/DashBoard';
 import '../MyOrders/MyOrders.css'
 
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
+    const {user} = useAuth();
 
     useEffect(()=>{
         fetch('http://localhost:8000/orders')
@@ -59,7 +62,7 @@ const handleDelete = (id) =>{
                    <tr>
                        <td style={{width:'100px', height:'60px'}}>{order.firstName}</td>
                        <td style={{width:'200px'}}>{order.email}</td>
-                       <td><button className="btn btn-warning">Update</button></td>
+                       <td><Link to={`/booking/update/${order._id}`}><button className="btn btn-warning">Update</button></Link></td>
                        <td><button onClick={() => handleDelete(order._id)} className="btn btn-danger">Delete</button></td>
                    </tr>
                </table>)

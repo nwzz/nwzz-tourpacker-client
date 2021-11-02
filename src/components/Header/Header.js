@@ -19,10 +19,10 @@ const Header = () => {
                     </div>
                     <Nav className="justify-content-center d-flex gap-3 ">
                         <Nav.Link as={Link} to='/'>Home</Nav.Link>
-                        <Nav.Link as={HashLink} to="/home/#services">Services</Nav.Link>
-                        <Nav.Link as={Link} to='/online-consult/'>Online Consult</Nav.Link>
-                        <Nav.Link as={Link} to='/doctors/'>Doctors</Nav.Link>
+                        <Nav.Link as={HashLink} to="/home/#services">Popular Trips</Nav.Link>
+                        <Nav.Link as={Link} to='/booking'>Bookings</Nav.Link>
                         <Nav.Link as={Link} to='/blog/'>Blog</Nav.Link>
+                        <Nav.Link as={Link} to='/doctors/'>Gallery</Nav.Link>
                         <Nav.Link as={Link} to='/about-us/'>About Us</Nav.Link>
                         
                     </Nav>

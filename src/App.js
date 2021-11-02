@@ -7,8 +7,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import NotFound from './components/NotFound/NotFound';
 import AuthProvider from './contexts/AuthProvider';
-import OnlineConsult from './components/OnlineConsult/OnlineConsult';
-import Doctors from './components/Doctors/Doctors';
 import Blog from './components/Blog/Blog';
 import AboutUs from './components/AboutUs/AboutUs';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -16,6 +14,7 @@ import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageOrders from './components/ManageOrders/ManageOrders';
 import AddTourPackage from './components/AddTourPackage/AddTourPackage';
+import UpdatePackage from './components/UpdatePackage/UpdatePackage';
 
 function App() {
   return (
@@ -55,19 +54,23 @@ function App() {
             <PrivateRoute path="/booking/newPackage/">
               <AddTourPackage></AddTourPackage>
             </PrivateRoute>
+            <PrivateRoute path="/booking/update/:id">
+              <UpdatePackage></UpdatePackage>
+            </PrivateRoute>
+            <PrivateRoute exact path="/booking">
+              <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
 
 
             <Route path="/register/">
               <Register></Register>
             </Route>
 
-            <PrivateRoute path="/booking/:id">
+            <PrivateRoute exact path="/booking/:id">
               <ServiceDetails></ServiceDetails>
             </PrivateRoute>
 
-            <PrivateRoute path='/online-consult/'>
-              <OnlineConsult></OnlineConsult>
-            </PrivateRoute>
+          
 
             
 

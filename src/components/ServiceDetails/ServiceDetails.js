@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import './ServiceDetails.css';
@@ -10,7 +10,7 @@ import DashBoard from '../DashBoard/DashBoard';
 
 const ServiceDetails = () => {
     const { id } = useParams();
-    const location = useLocation();
+    //const location = useLocation();
     const [newService, setNewService] = useState([]);
     const { user } = useAuth();
       
@@ -53,7 +53,8 @@ const ServiceDetails = () => {
             
             <div className=" row d-flex">
                 <div className="col-md-5"><br />
-                    <h4 style={{color:'darkblue'}}>Your Selected Package</h4>
+                    {!newService._id ? <h4>Please Select a Package First!!</h4>
+                    : <h4 style={{color:'darkblue'}}>Wow!! <span style={{color:'tomato'}}>{newService.name}</span> Your Selected Package</h4>}
                     {
 
                         <div className="d-flex service-decor " >
