@@ -16,7 +16,7 @@ const ServiceDetails = () => {
       
 
     useEffect(() => {
-        const url = `http://localhost:8000/tours/${id}`;
+        const url = `https://fierce-wave-16804.herokuapp.com/tours/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setNewService(data));
@@ -28,7 +28,7 @@ const ServiceDetails = () => {
     const onSubmit = data =>{
         
 
-        fetch('http://localhost:8000/orders', {
+        fetch('https://fierce-wave-16804.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -75,11 +75,13 @@ const ServiceDetails = () => {
                 <div className="form col-md-6 justify-content-start">
                     <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                         <h4><span style={{color:'darkblue'}}>Please Register for Booking</span></h4>
+                        <input placeholder="Your Package" defaultValue={newService.name}  {...register("package")} />
                         <input placeholder="Your Name" defaultValue={user.displayName} {...register("firstName")} />
                         <input placeholder="Your Email" defaultValue={user.email}  {...register("email")} />
-                        <input placeholder="Address" {...register("address")} />
-                        <input placeholder="Reserve Date" type="date" name="Reserve date" id="" {...register(" reservationDate")} />
-                        <input placeholder="Contact No."{...register("phone")} />
+                        <input placeholder="Your Address" {...register("address")} />
+                        <input placeholder="Your City" {...register("city")} />
+                        <input placeholder="Reserve Date" type="date" name="Reserve date" id="" {...register("reservationDate")} />
+                        <input placeholder="Your Contact No."{...register("phone")} />
                         <input className="btn" style={{backgroundColor:'tomato', color:'white'}} type="submit" />
                     </form>
                 </div>

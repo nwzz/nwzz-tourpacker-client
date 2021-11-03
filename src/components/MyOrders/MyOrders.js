@@ -6,7 +6,7 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(()=>{
-        fetch('http://localhost:8000/orders')
+        fetch('https://fierce-wave-16804.herokuapp.com/orders')
         .then(res => res.json())
         .then(data =>{
             setOrders(data);
@@ -21,7 +21,7 @@ const handleDelete = (id) =>{
 
     const proceed = window.confirm('Are u sure to delete?');
         if(proceed){
-            const url = `http://localhost:8000/orders/${id}`;
+            const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'DELETE',
             
@@ -61,7 +61,7 @@ const handleDelete = (id) =>{
                        <td style={{width:'200px'}}>{order.email}</td>
                        <td style={{width:'100px'}}>{order.address}</td>
                        <td style={{width:'100px'}}>{order.phone}</td>
-                       <td style={{width:'100px'}}>{order.reservationDate}</td>
+                       {/* <td style={{width:'300px'}}>{order.reservationDate}</td> */}
 
 
                        {/* <td><button className="btn btn-warning">Update</button></td>

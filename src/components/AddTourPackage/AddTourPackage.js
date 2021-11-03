@@ -13,7 +13,7 @@ const AddTourPackage = () => {
 
 
     const onSubmit = data => {
-        fetch('http://localhost:8000/tours', {
+        fetch('https://fierce-wave-16804.herokuapp.com/tours', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

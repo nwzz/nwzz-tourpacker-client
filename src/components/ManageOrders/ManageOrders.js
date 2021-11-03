@@ -9,7 +9,7 @@ const ManageOrders = () => {
     const {user} = useAuth();
 
     useEffect(()=>{
-        fetch('http://localhost:8000/orders')
+        fetch('https://fierce-wave-16804.herokuapp.com/orders')
         .then(res => res.json())
         .then(data =>{
             setOrders(data);
@@ -24,7 +24,7 @@ const handleDelete = (id) =>{
 
     const proceed = window.confirm('Are u sure to delete?');
         if(proceed){
-            const url = `http://localhost:8000/orders/${id}`;
+            const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: 'DELETE',
             
@@ -33,7 +33,7 @@ const handleDelete = (id) =>{
         .then(data => {
             if(data.deletedCount > 0){
                 alert('deleted Successfully');
-                const restOrders = orders.filter(user =>user._id !== id);
+                const restOrders = orders.filter(order =>order._id !== id);
                 setOrders(restOrders);
             }
         })
@@ -44,7 +44,7 @@ const handleDelete = (id) =>{
 
 
     return (
-        <div className=""><br />
+        <div><br />
             <DashBoard></DashBoard><br />
             <h3 style={{color:'darkblue'}}>Manage The Orders</h3><br /><br />
            {/* {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import DashBoard from '../DashBoard/DashBoard';
+import '../ServiceDetails/ServiceDetails.css';
 
 const UpdatePackage = () => {
 
@@ -9,7 +10,7 @@ const UpdatePackage = () => {
     const [orders, setOrders] = useState({});
 
     useEffect(() =>{
-        const url = `http://localhost:8000/orders/${id}`;
+        const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setOrders(data))
@@ -18,18 +19,24 @@ const UpdatePackage = () => {
 
     const handleUpdateName = e =>{ 
         const updateName = e.target.value;
-        const updateUser = {firstName: updateName, email: orders.email };
+        const updateUser = {firstName: updateName, email: orders.email, reservationDate: orders.reservationDate };
         setOrders(updateUser);
      }
 
     const handleUpdateEmail = e  =>{
         const updateEmail = e.target.value;
-        const updateUser = {name: orders.firstName, email: updateEmail };
+        const updateUser = {firstName: orders.firstName, email: updateEmail, reservationDate: orders.reservationDate };
+        setOrders(updateUser);
+    }
+
+    const handleUpdateDate = e =>{
+        const updateDate = e.target.value;
+        const updateUser = {firstName: orders.firstName, email: orders.email, reservationDate: updateDate}
         setOrders(updateUser);
     }
 
     const handleUpdate = e =>{
-        const url = `http://localhost:8000/orders/${id}`;
+        const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
         fetch(url,{
             method: 'PUT',
             headers:{
@@ -43,7 +50,7 @@ const UpdatePackage = () => {
             if(data.modifiedCount > 0){
                 alert('Updated Successfully');
                 setOrders({});
-                history.push('/booking/manageOrders/');
+                history.push('/booking/manageOrders');
             }
         })
         e.preventDefault();
@@ -56,13 +63,16 @@ const UpdatePackage = () => {
         <div><br />
             <DashBoard></DashBoard><br />
             <div>
-            <h2>Update User <h4>{orders.firstName}</h4></h2>
-            <p>{id}</p>
-            <form onSubmit={handleUpdate}>
+            <h4>Update Your Order Mr. <span style={{color:'tomato'}}>{orders.firstName}</span></h4>
+            <p>Id: {id}</p>
+            <div style={{marginLeft:'610px', padding:'10px'}} >
+            <form className="shipping-form" onSubmit={handleUpdate}>
                 <input type="text" onChange={handleUpdateName} value={orders.firstName || ''} id="" />
                 <input type="email" onChange={handleUpdateEmail} value={orders.email || ''} id="" />
-                <input type="submit" value="Update" />
+                <input type="date" onChange={handleUpdateDate} value={orders.reservationDate || ''} id="" />
+                <input className="btn" style={{color:'white', backgroundColor:'tomato'}} type="submit"    value="Update" />
             </form>
+            </div>
 
         </div><br /><br /><br /><br /><br /><br /><br />
         </div>
