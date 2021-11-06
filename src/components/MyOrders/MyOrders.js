@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import DashBoard from '../DashBoard/DashBoard';
 import './MyOrders.css';
 
@@ -17,25 +18,25 @@ const MyOrders = () => {
 
 
 
-const handleDelete = (id) =>{
+// const handleDelete = (id) =>{
 
-    const proceed = window.confirm('Are u sure to delete?');
-        if(proceed){
-            const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
-        fetch(url, {
-            method: 'DELETE',
+//     const proceed = window.confirm('Are u sure to delete?');
+//         if(proceed){
+//             const url = `https://fierce-wave-16804.herokuapp.com/orders/${id}`;
+//         fetch(url, {
+//             method: 'DELETE',
             
-        })
-        .then(res => res.json())
-        .then(data => {
-            if(data.deletedCount > 0){
-                alert('deleted Successfully');
-                const restOrders = orders.filter(user =>user._id !== id);
-                setOrders(restOrders);
-            }
-        })
-        }
-}
+//         })
+//         .then(res => res.json())
+//         .then(data => {
+//             if(data.deletedCount > 0){
+//                 alert('deleted Successfully');
+//                 const restOrders = orders.filter(user =>user._id !== id);
+//                 setOrders(restOrders);
+//             }
+//         })
+//         }
+// }
 
 
 
@@ -51,24 +52,25 @@ const handleDelete = (id) =>{
 
                </p>)
            } */}
-          <div className="justify-content-center order-table" >
-          {
-               orders.map(order =><table style={{width:'50%'}}
-               key={order._id} className="table-decor" >
-                
-                   <tr>
-                       <td style={{width:'100px', height:'60px'}}>{order.firstName}</td>
-                       <td style={{width:'200px'}}>{order.email}</td>
-                       <td style={{width:'100px'}}>{order.address}</td>
-                       <td style={{width:'100px'}}>{order.phone}</td>
-                       {/* <td style={{width:'300px'}}>{order.reservationDate}</td> */}
-
-
-                       {/* <td><button className="btn btn-warning">Update</button></td>
-                       <td><button onClick={() => handleDelete(order._id)} className="btn btn-danger">Delete</button></td> */}
+          <div className="justify-content-center " >
+          
+              <table style={{width:'50%'}}
+               className="order-table" >
+                  <tr>
+                    <th>Name</th><th>Email</th><th>Address</th><th>Phone</th><th>Extra</th>
+                  </tr>
+               {orders.map(order =><tr key={order._id}>
+                       {/* <td className="table-cell" >{order.package}</td> */}
+                       <td className="table-cell" >{order.firstName}</td>
+                       <td className="table-cell" >{order.email}</td>
+                       <td className="table-cell" >{order.address}</td>
+                       <td className="table-cell" >{order.phone}</td>
+                       <td>
+                           <Link to="/booking/manageOrders"><button className="btn btn-info">Manage Order</button></Link>
+                       </td>
                    </tr>
-               </table>)
-           }
+               )
+           } </table>
           </div><br /><br /><br /><br />
         </div>
     );

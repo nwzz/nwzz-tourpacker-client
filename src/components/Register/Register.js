@@ -103,7 +103,7 @@ const Register = () => {
 
                     <Form.Group className="justify-content-start d-flex" >
 
-                        <input className="submit-btn btn" style={{color:'white', backgroundColor:'cadetblue'}} type="submit" value='Sign Up' />
+                        <input className="submit-btn btn" style={{color:'white', backgroundColor:'tomato'}} type="submit" value='Sign Up' />
                 
 
                     </Form.Group>

@@ -75,12 +75,12 @@ const ServiceDetails = () => {
                 <div className="form col-md-6 justify-content-start">
                     <form className="shipping-form" onSubmit={handleSubmit(onSubmit)}>
                         <h4><span style={{color:'darkblue'}}>Please Register for Booking</span></h4>
-                        <input placeholder="Your Package" defaultValue={newService.name}  {...register("package")} />
+                        <input placeholder="Your Package" defaultValue={newService.name} {...register("package")} />
                         <input placeholder="Your Name" defaultValue={user.displayName} {...register("firstName")} />
-                        <input placeholder="Your Email" defaultValue={user.email}  {...register("email")} />
+                        <input placeholder="Your Email" defaultValue={user.email} {...register("email")} />
                         <input placeholder="Your Address" {...register("address")} />
                         <input placeholder="Your City" {...register("city")} />
-                        <input placeholder="Reserve Date" type="date" name="Reserve date" id="" {...register("reservationDate")} />
+                        <input placeholder="Reserve Date" type="date"{...register("reservationDate")} />
                         <input placeholder="Your Contact No."{...register("phone")} />
                         <input className="btn" style={{backgroundColor:'tomato', color:'white'}} type="submit" />
                     </form>
