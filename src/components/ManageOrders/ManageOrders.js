@@ -60,7 +60,7 @@ const handleDelete = (id) =>{
                key={order._id} className="table-decor" >
                 
                    <tr>
-                       <td>{order.package}</td>
+                       {/* <td>{order.package}</td> */}
                        <td style={{width:'100px', height:'60px'}}>{order.firstName}</td>
                        <td style={{width:'200px'}}>{order.email}</td>
                        <td><Link to={`/booking/update/${order._id}`}><button className="btn btn-warning">Update</button></Link></td>
